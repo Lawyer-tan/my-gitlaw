@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import { NAV_DATA, Category } from '../data/navData';
+import { NAV_DATA, Category } from '../data/gitlaw';
 
 // 定义标签圆点颜色
 const TAG_COLORS = ['#e83e8c', '#39ca30', '#dfd545', '#7c3aed', '#0d9488', '#ea580c', '#b45309', '#2563eb'];
