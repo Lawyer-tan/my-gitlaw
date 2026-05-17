@@ -19,14 +19,14 @@ export const calculatorsData: Category = {
         { 
           name: "仲裁费计算器", 
           desc: "各地仲裁委员会（贸仲、北仲等）案件处理及受理费用测算。", 
-          url: "#", 
+          url: "/calculator/arbitration", 
           logo: "⚖️", 
           tags: ["商事", "仲裁"] 
         },
         { 
           name: "律师费计算器", 
           desc: "各省市律师服务收费指导标准及市场常见费率计算。", 
-          url: "#", 
+          url: "/calculator/lawyer-fee", 
           logo: "💼", 
           tags: ["费用", "法律服务"] 
         },

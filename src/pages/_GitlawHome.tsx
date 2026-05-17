@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import { NAV_DATA, Category } from '../data/gitlaw';
-import FeeCalculator from '../components/FeeCalculator'; // 引入计算器组件
+import FeeCalculator from '../components/FeeCalculator'; // 引入诉讼费计算器组件
+import ArbitrationCalculator from '../components/ArbitrationCalculator'; // 引入仲裁费计算器组件
+import LawyerFeeCalculator from '../components/LawyerFeeCalculator'; // 引入律师费计算器组件
 
 const TAG_COLORS = ['#e83e8c', '#39ca30', '#dfd545', '#7c3aed', '#0d9488', '#ea580c', '#b45309', '#2563eb'];
 
@@ -127,9 +129,14 @@ export default function GitlawHome(): JSX.Element {
               </button>
             </div>
             
-            {/* 弹窗核心内容：动态载入计算器组件 */}
+            {/* 弹窗核心内容：立案庭分流机制（根据卡片名称动态载入不同的算力引擎） */}
             <div style={{ padding: '24px', backgroundColor: 'var(--ifm-background-surface-color)' }}>
-              <FeeCalculator />
+              {activeCalculator.includes('律师费') 
+                ? <LawyerFeeCalculator /> 
+                : activeCalculator.includes('仲裁') 
+                  ? <ArbitrationCalculator /> 
+                  : <FeeCalculator />
+              }
             </div>
           </div>
         </div>
